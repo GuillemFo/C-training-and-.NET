@@ -1,0 +1,9 @@
+/*
+My service structure object
+WeatherData
+TemperatureC
+Humidity
+WindSpeed
+City
+etc...
+*/
