@@ -21,3 +21,10 @@ How to run:
 
 Testing:
 	Good old curl. localhost:5000/weather/place
+
+
+Swagger UI
+	https://learn.microsoft.com/en-us/aspnet/core/tutorials/getting-started-with-swashbuckle?view=aspnetcore-8.0&tabs=visual-studio
+
+Controllers
+	https://www.completecsharptutorial.com/docs/net-core/controllers-in-asp-net-core/introduction-to-controllers/
