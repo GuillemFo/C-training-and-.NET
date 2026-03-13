@@ -30,5 +30,5 @@ Controllers
 	https://www.completecsharptutorial.com/docs/net-core/controllers-in-asp-net-core/introduction-to-controllers/
 	https://www.tutorialsteacher.com/mvc/mvc-controller
 
-Open Weather Map API
-https://openweathermap.org/api/one-call-3?collection=one_call_api_3.0
+Open Meteo API docs
+https://open-meteo.com/en/docs
