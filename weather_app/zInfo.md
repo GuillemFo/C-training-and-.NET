@@ -28,3 +28,4 @@ Swagger UI
 
 Controllers
 	https://www.completecsharptutorial.com/docs/net-core/controllers-in-asp-net-core/introduction-to-controllers/
+	https://www.tutorialsteacher.com/mvc/mvc-controller

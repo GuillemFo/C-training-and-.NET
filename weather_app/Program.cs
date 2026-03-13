@@ -1,8 +1,12 @@
 using System.Reflection;
 using System.IO;
+using weather_app.Services;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
+builder.Services.AddScoped<WeatherService>();
+
+builder.Services.AddOpenApi();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
 {
@@ -16,6 +20,7 @@ var app = builder.Build();
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
+	app.MapOpenApi();
 	app.UseSwagger();
 	app.UseSwaggerUI(options =>
 	{
@@ -24,12 +29,12 @@ if (app.Environment.IsDevelopment())
 	});
 }
 
-app.UseHttpsRedirection();
+//app.UseHttpsRedirection();
 
 app.MapControllers();
 app.Run();
 
-record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary)
-{
-    public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
-}
+// record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary)
+// {
+//     public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
+// }
