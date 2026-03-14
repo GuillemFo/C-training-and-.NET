@@ -1,11 +1,11 @@
-https://openweathermap.org/api
-	Weather API doc
+
 
 https://learn.microsoft.com/en-us/dotnet/
 	General dotnet
 
 https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/
 	equivalent to cppreference
+https://aspnetcoremaster.com/
 
 https://learn.microsoft.com/en-us/dotnet/api/
 	Class and methods
