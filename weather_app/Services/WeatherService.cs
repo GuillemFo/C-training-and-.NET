@@ -5,24 +5,52 @@ Unit conversion
 Provider fallback
 Something like GetWeather(city)
 */
+using System;
+using System.Net.Http;
+using System.Threading.Tasks;
+using System.Text.Json;
 using weather_app.Models;
 
 namespace weather_app.Services
 {
 	public class WeatherService
 	{
-		public WeatherData GetWeather(string city)
-		{
-			//api call with trimmed extra spaces front and back string for name so no issues with api. (need to read api use)
-			// normalize city name to set it as init val for data struct. (ciudad real to Ciudad Real or madrid to Madrid etc)
-			// need to check how to store api data and how to access it to build our weather data object to return.
+		private readonly HttpClient _httpClient;
 
+		public WeatherService()
+		{
+			_httpClient = new HttpClient();
+		}
+
+		public async Task<WeatherData?> GetWeather(string city)
+		{
+			string url = "https://api.open-meteo.com/v1/forecast?latitude=41.3888&longitude=2.159&current=temperature_2m,wind_speed_10m,relative_humidity_2m&forecast_days=1";
+			
+			var response = await _httpClient.GetAsync(url);
+			response.EnsureSuccessStatusCode();
+
+			var json = await response.Content.ReadAsStringAsync();
+
+			var apiData = JsonSerializer.Deserialize<WeatherApiResponse>(json);
+
+			if (apiData == null || apiData.current == null)
+			{
+				return null;
+			}
+
+			Console.WriteLine(apiData.current.temperature_2m);
+			Console.WriteLine(apiData.current.wind_speed_10m);
+			
+			
 			return new WeatherData
 			{
 				CityName = city,
-				TemperatureC = 20,
-				Humidity = 50,
-				WindSpeedKph = 10
+				Temperature = apiData.current.temperature_2m,
+				// Temperature_type = apiData.current_Units.temperature_2m,
+				WindSpeed = apiData.current.wind_speed_10m,
+				// WindSpeed_type = apiData.current_Units.wind_speed_10m,
+				Humidity = apiData.current.relative_humidity_2m,
+				// Humidity_type = apiData.current_Units.relative_humidity_2m,
 			};
 		}
 		

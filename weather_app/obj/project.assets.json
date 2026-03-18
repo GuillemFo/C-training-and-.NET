@@ -483,24 +483,25 @@
     ]
   },
   "packageFolders": {
-    "/home/codespace/.nuget/packages/": {}
+    "/home/wil/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/workspaces/C-training-and-.NET/weather_app/weather_app.csproj",
+      "projectUniqueName": "/home/wil/C-training-and-.NET/weather_app/weather_app.csproj",
       "projectName": "weather_app",
-      "projectPath": "/workspaces/C-training-and-.NET/weather_app/weather_app.csproj",
-      "packagesPath": "/home/codespace/.nuget/packages/",
-      "outputPath": "/workspaces/C-training-and-.NET/weather_app/obj/",
+      "projectPath": "/home/wil/C-training-and-.NET/weather_app/weather_app.csproj",
+      "packagesPath": "/home/wil/.nuget/packages/",
+      "outputPath": "/home/wil/C-training-and-.NET/weather_app/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/codespace/.nuget/NuGet/NuGet.Config"
+        "/home/wil/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net10.0"
       ],
       "sources": {
+        "/usr/lib/dotnet/library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -557,7 +558,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/10.0.100/PortableRuntimeIdentifierGraph.json",
+        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/10.0.104/PortableRuntimeIdentifierGraph.json",
         "packagesToPrune": {
           "Microsoft.AspNetCore": "(,10.0.32767]",
           "Microsoft.AspNetCore.Antiforgery": "(,10.0.32767]",

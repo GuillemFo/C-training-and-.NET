@@ -24,9 +24,15 @@ namespace weather_app.Controllers
 		}
 
 		[HttpGet("{city}")]
-		public WeatherData GetWeather(string city)
+		public async Task<IActionResult>etWeather(string city)
 		{
-			return _weatherService.GetWeather(city);
+			var weather = await _weatherService.GetWeather(city);
+			
+			if (weather == null)
+			{
+				return NotFound(new { message = $"Weather data for '{city}' not found" });
+			}
+			return Ok(weather);
 		}
 	}
 }

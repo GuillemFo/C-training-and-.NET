@@ -15,9 +15,15 @@ namespace weather_app.Models
 	public class WeatherData
 	{
 		public required string CityName {get; init;}
-		public int TemperatureC {get; set;}
+		
+		public float Temperature {get; set;}
+		// public required string Temperature_type {get;set;}
+		
+		public float WindSpeed {get; set;}
+		// public required string WindSpeed_type {get;set;}
+		
 		public int Humidity {get; set;}
-		public int WindSpeedKph {get; set;}
+		// public required string Humidity_type {get;set;}
 	}
 }
 

@@ -1,26 +1,30 @@
-
-
-https://learn.microsoft.com/en-us/dotnet/
-	General dotnet
-
-https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/
-	equivalent to cppreference
-https://aspnetcoremaster.com/
-
-https://learn.microsoft.com/en-us/dotnet/api/
-	Class and methods
-	Important pages:
-		HttpClient
-		Task
-		Dictionary
-		List
-		LINQ
+Info and useful pages used during dev and learning
 
 How to run:
 	dotnet run
 
 Testing:
 	Good old curl. localhost:5000/weather/place
+
+
+General dotnet
+	https://learn.microsoft.com/en-us/dotnet/
+
+equivalent to cppreference
+	https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/
+
+Tutorials
+	https://aspnetcoremaster.com/
+
+Class and methods
+Important pages:
+-HttpClient
+-Task
+-Dictionary
+-List
+-LINQ
+	https://learn.microsoft.com/en-us/dotnet/api/
+
 
 
 Swagger UI
@@ -31,4 +35,8 @@ Controllers
 	https://www.tutorialsteacher.com/mvc/mvc-controller
 
 Open Meteo API docs
-https://open-meteo.com/en/docs
+	https://open-meteo.com/en/docs
+
+Api from .NET
+	https://learn.microsoft.com/en-us/aspnet/web-api/overview/advanced/calling-a-web-api-from-a-net-client
+	https://rzc.com.br/dotnet/2024/12/29/using-httpclient-for-api-calls/
