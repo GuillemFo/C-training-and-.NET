@@ -1,4 +1,3 @@
-using System.Text.Json.Serialization;
 
 namespace weather_app.Models
 {
@@ -16,15 +15,15 @@ namespace weather_app.Models
 
 	// public class CurrentUnits
 	// {
-	// 	public required string temperature_2m {get;set;}
+	// 	public string temperature_2m {get;set;} = "";
 
-	// 	public required string wind_speed_10m {get;set;}
+	// 	public string wind_speed_10m {get;set;} = "";
 		
-	// 	public required string relative_humidity_2m{get;set;}
+	// 	public string relative_humidity_2m{get;set;} = "";
 	// }
 	public class CurrentWeather
 	{
-		public required string time {get;set;}
+		public string time {get;set;} = "";
 		
 		public float temperature_2m {get;set;}
 

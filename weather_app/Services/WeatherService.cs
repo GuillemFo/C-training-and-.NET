@@ -24,7 +24,7 @@ namespace weather_app.Services
 
 		public async Task<WeatherData?> GetWeather(string city)
 		{
-			string url = "https://api.open-meteo.com/v1/forecast?latitude=41.3888&longitude=2.159&current=temperature_2m,wind_speed_10m,relative_humidity_2m&forecast_days=1";
+			string url = $"https://api.open-meteo.com/v1/forecast?latitude={latitude}&longitude={longitude}&current=temperature_2m,wind_speed_10m,relative_humidity_2m&forecast_days=1";
 			
 			var response = await _httpClient.GetAsync(url);
 			response.EnsureSuccessStatusCode();

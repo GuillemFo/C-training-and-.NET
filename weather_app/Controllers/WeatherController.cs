@@ -24,7 +24,7 @@ namespace weather_app.Controllers
 		}
 
 		[HttpGet("{city}")]
-		public async Task<IActionResult>etWeather(string city)
+		public async Task<IActionResult>Weather(string city)
 		{
 			var weather = await _weatherService.GetWeather(city);
 			
