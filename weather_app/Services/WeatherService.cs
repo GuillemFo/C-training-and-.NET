@@ -35,7 +35,8 @@ namespace weather_app.Services
 
 			if (apiData == null || apiData.current == null)
 			{
-				return null;
+				// Handle no apiData 
+				return null; // temp protection
 			}
 
 			Console.WriteLine(apiData.current.temperature_2m);
