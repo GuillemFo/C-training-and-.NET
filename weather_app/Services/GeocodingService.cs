@@ -17,7 +17,7 @@ namespace weather_app.Services
 
 		public async Task<City?> GetCity(string city)
 		{
-			string url = $"";
+			string url = $"https://geocoding-api.open-meteo.com/v1/search?name={city}&count=1&language=en&format=json";
 
 			var response = await _httpClient.GetAsync(url);
 			response.EnsureSuccessStatusCode();
