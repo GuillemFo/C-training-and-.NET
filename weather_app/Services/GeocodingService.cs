@@ -10,14 +10,14 @@ namespace weather_app.Services
 	{
 		private readonly HttpClient _httpClient;
 
-		public GeocodingService()
+		public GeocodingService(HttpClient httpClient)
 		{
-			_httpClient = new HttpClient();
+			_httpClient = httpClient;
 		}
 
 		public async Task<City?> SearchCity(string city)
 		{
-			string url = $"https://geocoding-api.open-meteo.com/v1/search?name={city}&count=1&language=en&format=json";
+			string url = BuildLocationUrl(city);
 
 			var response = await _httpClient.GetAsync(url);
 			response.EnsureSuccessStatusCode();
@@ -31,6 +31,11 @@ namespace weather_app.Services
 			}
 
 			return cityInfo.results[0];
+		}
+
+		private string BuildLocationUrl(string city_name)
+		{	
+			return ($"https://geocoding-api.open-meteo.com/v1/search?name={city_name}&count=1&language=en&format=json");
 		}
 		
 	}

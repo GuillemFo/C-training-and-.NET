@@ -4,8 +4,9 @@ using weather_app.Services;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
-builder.Services.AddScoped<WeatherService>();
-builder.Services.AddScoped<GeocodingService>();
+builder.Services.AddScoped<IWeatherService, WeatherService>();
+builder.Services.AddScoped<IGeocodingService, GeocodingService>();
+builder.Services.AddHttpClient();
 
 builder.Services.AddOpenApi();
 builder.Services.AddEndpointsApiExplorer();
