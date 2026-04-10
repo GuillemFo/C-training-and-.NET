@@ -6,7 +6,7 @@ using weather_app.Models;
 
 namespace weather_app.Services
 {
-	public class GeocodingService
+	public class GeocodingService : IGeocodingService
 	{
 		private readonly HttpClient _httpClient;
 
@@ -15,7 +15,7 @@ namespace weather_app.Services
 			_httpClient = new HttpClient();
 		}
 
-		public async Task<City?> GetCity(string city)
+		public async Task<City?> SearchCity(string city)
 		{
 			string url = $"https://geocoding-api.open-meteo.com/v1/search?name={city}&count=1&language=en&format=json";
 

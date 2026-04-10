@@ -40,3 +40,6 @@ Open Meteo API docs
 Api from .NET
 	https://learn.microsoft.com/en-us/aspnet/web-api/overview/advanced/calling-a-web-api-from-a-net-client
 	https://rzc.com.br/dotnet/2024/12/29/using-httpclient-for-api-calls/
+
+Service Lifetimes for dependency injection-
+	https://learn.microsoft.com/en-us/dotnet/core/extensions/dependency-injection/service-lifetimes
